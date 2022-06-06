@@ -1,7 +1,6 @@
 # Hello Rails app
 
-This README documents steps necessary to get the
-application up and running.
+This README documents steps necessary to get the application up and running.
 
 
 * Ruby version
@@ -15,17 +14,18 @@ application up and running.
 * Configuration
   - Install ruby  - [Installation guides](https://www.ruby-lang.org/en/documentation/installation/)
   - install PostgreSQL - [Installation guides](https://www.postgresql.org/download/linux/)
-  - intall libpqdev ``` sudo apt install libpq-dev  ``` for linux debian users
+  - install libpqdev ``` sudo apt install libpq-dev  ``` for linux debian users
   - Make sure your Postgresql is running. If not, start the service by typing ```sudo service postgresql start``` in your terminal (for linux debian users)
 
 * Installation 
-  - ```git clone``` this [repo](https://github.com/blessedjasonmwanza/hellorails)
+  - ```git clone``` this [repo](https://github.com/blessedjasonmwanza/hello-rails)
   - Run:
-    - ```cd hellorails```
+    - ```cd hello-rails```
     - ```bundle install```
   
 * Database creation
- - rake db:create
+  - Run
+       - ```rake db:create```
 
 * Run project
   - Run ```rails s``` and visit [http://localhost:3000/](http://localhost:3000/) in your browser!
