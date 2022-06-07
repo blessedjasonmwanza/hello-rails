@@ -53,7 +53,7 @@ This README documents steps necessary to get the application up and running.
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/blessedjasonmwanza/hackers-in-residence/issues).
+Feel free to check the [issues page](https://github.com/blessedjasonmwanza/rails-blog-app/issues).
 
 ## Show your support
 
