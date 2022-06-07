@@ -29,3 +29,7 @@ This README documents steps necessary to get the application up and running.
 
 * Run project
   - Run ```rails s``` and visit [http://localhost:3000/](http://localhost:3000/) in your browser!
+
+* Tests
+ - Run (*ensure your postgreSQL is running as well*)
+    - ```rspec```
