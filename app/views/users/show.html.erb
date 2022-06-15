@@ -1,8 +1,10 @@
 <%= render partial: 'partials/user_card', locals: { user: @user }%>
 <div class='bio'>
-<em></em>
-<p><%= @user.bio %></p>
+  <b>Bio</b>
+  <p><%= @user.bio %></p>
 </div>
 <% @recent_posts.each do |post| %>
-  <% render partial: 'partials/post_snipet', locals: { post: post} %>
+  <%= render partial: 'partials/post_snipet', locals: { post: post} %>
 <% end %>
+
+<%= link_to("See all posts", user_posts_path(@user), class: "see-all-btn") %>
