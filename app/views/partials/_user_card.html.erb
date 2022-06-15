@@ -1,0 +1,10 @@
+<%= stylesheet_link_tag('user_card') %>
+<section class="user_card">
+  <%= image_tag('profile_pic.jpeg', class:'user_picture') %>
+  <div>
+    <h1><%= link_to(user.name, user_path(user)) %></h1>
+    <p>
+      Number of posts: <%= user.posts_counter %>
+    </p>
+  </div>
+</section>

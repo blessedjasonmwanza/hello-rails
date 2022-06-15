@@ -1,0 +1,10 @@
+.user_card {
+  display: flex;
+  flex-flow: row;
+  border: 1px solid #ddd;
+  align-items: center;
+}
+
+.user_card .user_picture {
+  max-height: 80px;
+}
