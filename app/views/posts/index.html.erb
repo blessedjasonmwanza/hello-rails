@@ -1,2 +1,12 @@
-<h1>User posts</h1>
-<p>This will list all posts for a single user</P>
+<%= render partial: 'partials/user_card', locals: { user: @user } %>
+
+<% @user_posts.each do |post| %>
+    <%= render partial: 'partials/post_snipet', locals: { post: post} %>
+      <ul class="comments">
+      <% post.recent_comments.each do |comment| %>
+        <li><%= comment.author.name %>: <%= comment.text %>
+      <% end %>
+      </ul>
+<% end %>
+
+<button class="see-all-btn">Pagination</button>

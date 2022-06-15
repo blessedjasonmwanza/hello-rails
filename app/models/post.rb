@@ -1,6 +1,7 @@
 class Post < ApplicationRecord
   belongs_to :author, class_name: 'User'
   has_many :likes
+  has_many :comments
 
   after_save :increase_posts_counter
   def increase_posts_counter

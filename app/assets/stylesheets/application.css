@@ -15,14 +15,17 @@
  */
 
 .post-snipet,
-.bio {
+.bio,
+.comments {
   display: flex;
   border: 2px solid #333;
+  border-radius: 3px;
   margin: 10px 0;
   padding: 5px 10px;
   width: calc(100% - 20px);
   flex-direction: column;
   gap: 10px;
+  list-style-type: none;
 }
 
 .post-snipet * {
@@ -32,6 +35,10 @@
 .post-snipet .post-stats {
   display: flex;
   justify-content: flex-end;
+}
+
+.comments {
+  margin-top: -9px;
 }
 
 .see-all-btn {
@@ -47,6 +54,6 @@
   margin-top: 10px;
 }
 
-a{
+a {
   text-decoration: none;
 }
