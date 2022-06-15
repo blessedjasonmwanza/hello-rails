@@ -32,6 +32,7 @@ This README documents steps necessary to get the application up and running.
       - ```rspec```
 
 * Run project
+  - ```rails db:migrate:reset db:seed``` then
   - Run ```rails s``` and visit [http://localhost:3000/](http://localhost:3000/) in your browser!
 
 <!-- * Database initialization -->
