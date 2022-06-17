@@ -65,10 +65,11 @@
   margin-top: 10px;
 }
 
-.see-all-btn{
-  width: 80px;
-  min-width: fit-content;
+.see-all-btn {
+  white-space: nowrap;
+  width: 100px;
   margin: 0 auto;
+  text-align: center;
 }
 
 a {
@@ -82,17 +83,17 @@ a {
   margin-top: -9px;
 }
 
-.new_comment{
+.new_comment {
   display: flex;
   flex-flow: column;
 }
 
-.new_comment #comment_text{
+.new_comment #comment_text {
   display: inline-block;
   width: 40%;
   height: 100px;
 }
 
-.new_comment input{
+.new_comment input {
   width: fit-content;
 }
