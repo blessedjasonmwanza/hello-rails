@@ -54,10 +54,8 @@
   margin-top: -9px;
 }
 
-.see-all-btn {
+.btn {
   display: block;
-  width: 80px;
-  margin: 0 auto;
   padding: 5px 10px;
   box-shadow: 0 1px 8px 1px rgba(0, 0, 0, 0.8);
   border-radius: 3px;
@@ -67,6 +65,35 @@
   margin-top: 10px;
 }
 
+.see-all-btn {
+  white-space: nowrap;
+  width: 100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
 a {
   text-decoration: none;
+}
+
+.new_like {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+  margin-top: -9px;
+}
+
+.new_comment {
+  display: flex;
+  flex-flow: column;
+}
+
+.new_comment #comment_text {
+  display: inline-block;
+  width: 40%;
+  height: 100px;
+}
+
+.new_comment input {
+  width: fit-content;
 }
