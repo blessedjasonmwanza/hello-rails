@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Post, type: :model do
   describe 'Post model' do
-    user = user.create(name: 'Blessed J. Mwanza', bio: 'bio template')
+    user = User.create(name: 'Blessed J. Mwanza', bio: 'bio template')
     subject do
       Post.new(title: 'My new post', text: 'Hi there robot :-) ', author: user)
     end
