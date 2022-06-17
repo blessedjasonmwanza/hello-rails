@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Like, type: :model do
   user = User.new(Name: 'Blesssed Jason Mwanza', Photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
                   Bio: 'Passion Driven software developer with a keen enthusiam for creating impact driven software')
-  post = Post.create(author: user, Title: '1 post', Text: 'first post')
+  post = Post.create(author: user, title: '1 post', text: 'first post')
   it 'tests if the Like model is created correctly' do
     like = Like.create(author: user, post: post)
     expect(like.author).to eq user
