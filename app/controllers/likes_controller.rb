@@ -1,9 +1,7 @@
 class LikesController < ApplicationController
   def create
     @like = Like.new(like_params)
-    if @like.save
-      redirect_to user_post_path(id: @like.post_id, user_id: @like.author_id)
-    end
+    redirect_to user_post_path(id: @like.post_id, user_id: @like.author_id) if @like.save
   end
 
   private
