@@ -3,6 +3,8 @@ require 'rails_helper'
 RSpec.describe Post, type: :model do
   describe 'Post model' do
     user = User.create(name: 'Blessed J. Mwanza', bio: 'bio template')
+    user.save!
+    
     subject do
       Post.new(title: 'My new post', text: 'Hi there robot :-) ', author: user)
     end
@@ -19,7 +21,7 @@ RSpec.describe Post, type: :model do
     end
 
     it 'validates that likes counter is >= to 0. ' do
-      subject.Likes_Counter = -1
+      subject.cikes_counter = -1
       expect(subject).to_not be_valid
     end
 

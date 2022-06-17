@@ -7,6 +7,8 @@ RSpec.describe Comment, type: :model do
     post.save!
 
     comment_creator = User.new(name: 'Jerry', photo: 'profile_pic.jpeg', bio: 'Bio template', posts_counter: 0)
+    comment_creator.save!
+    
     post.comments.create!(text: 'Hi World', author: comment_creator)
     post.comments.create!(text: 'This is actually my second post', author: comment_creator)
     expect(post.comments.length).to eql(2)

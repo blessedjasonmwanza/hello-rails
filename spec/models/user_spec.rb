@@ -5,7 +5,7 @@ RSpec.describe User, type: :model do
     User.new(name: 'Blessed Jason Mwanza', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Passion Driven software developer with a keen enthusiam for creating impact driven software')
   end
 
-  before { subject.save }
+  before { subject.save! }
 
   it 'Name must be Present' do
     subject.name = nil
@@ -13,7 +13,7 @@ RSpec.describe User, type: :model do
   end
 
   it 'Photo must be a string' do
-    subject.Photo = 'photo source'
+    subject.photo = 'photo source'
     expect(subject).to be_valid
   end
 
