@@ -21,7 +21,7 @@ RSpec.describe Post, type: :model do
     end
 
     it 'validates that likes counter is >= to 0. ' do
-      subject.cikes_counter = -1
+      subject.likes_counter = -1
       expect(subject).to_not be_valid
     end
 
