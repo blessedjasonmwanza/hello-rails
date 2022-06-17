@@ -2,7 +2,7 @@ class Post < ApplicationRecord
   belongs_to :author, class_name: 'User'
   has_many :likes
   has_many :comments
-  validates :title, presence: true, length: {minimum:0, maximum:250}
+  validates :title, presence: true, length: { minimum: 0, maximum: 250 }
   validates :text, presence: true
   validates :likes_counter, comparison: { greater_than_or_equal_to: 0 }
 
