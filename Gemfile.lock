@@ -73,6 +73,9 @@ GEM
     bootsnap (1.12.0)
       msgpack (~> 1.2)
     builder (3.2.4)
+    bullet (7.0.2)
+      activesupport (>= 3.0.0)
+      uniform_notifier (~> 1.11)
     capybara (3.37.1)
       addressable
       matrix
@@ -233,6 +236,7 @@ GEM
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.1.0)
+    uniform_notifier (1.16.0)
     web-console (4.2.0)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -246,6 +250,7 @@ GEM
     websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
+    xmpp4r (0.5.6)
     xpath (3.2.0)
       nokogiri (~> 1.8)
     zeitwerk (2.5.4)
@@ -255,6 +260,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap
+  bullet (~> 7.0, >= 7.0.2)
   capybara
   debug
   importmap-rails
@@ -272,6 +278,7 @@ DEPENDENCIES
   tzinfo-data
   web-console
   webdrivers
+  xmpp4r (~> 0.5.6)
 
 RUBY VERSION
    ruby 2.7.4p191

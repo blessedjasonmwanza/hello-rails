@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     @user = User.find(params[:user_id])
-    @user_posts = Post.where(author_id: params[:user_id]).order(created_at: :desc)
+    @user_posts = Post.includes(:author, :likes, :comments).where(author_id: params[:user_id]).order(created_at: :desc)
   end
 
   # GET /posts/1
@@ -22,10 +22,12 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     if @post.save
+      flash[:success] = 'New post created successfully'
       redirect_to user_post_path(id: @post.id, user_id: @post.author_id)
     else
       render :new, status: :unprocessable_entity, content_type: 'text/html'
       headers['Content-Type'] = 'text/html'
+      flash[:danger] = 'Post could not be created'
     end
   end
 

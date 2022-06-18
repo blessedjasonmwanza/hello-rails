@@ -10,10 +10,6 @@ describe 'GET /users/:id/posts' do
     get '/users/1/posts'
     expect(response).to render_template('index')
   end
-  it 'renders the Post text' do
-    get '/users/1/posts'
-    expect(response.body).to include('User posts')
-  end
 end
 describe 'GET /users/:id/posts/:id' do
   it 'returns http success' do
@@ -23,9 +19,5 @@ describe 'GET /users/:id/posts/:id' do
   it 'renders the show template' do
     get '/users/1/posts/1'
     expect(response).to render_template('show')
-  end
-  it 'renders the Post text' do
-    get '/users/1/posts/1'
-    expect(response.body).to include('User post')
   end
 end
