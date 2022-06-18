@@ -64,6 +64,8 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+  gem 'bullet', '~> 7.0', '>= 7.0.2'
+  gem 'xmpp4r', '~> 0.5.6'
 end
 
 group :test do
