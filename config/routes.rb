@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :comments, only: [:create]
   resources :likes, only: [:create]
   # root 'pages/hello'
