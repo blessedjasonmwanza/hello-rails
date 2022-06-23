@@ -96,7 +96,7 @@ a {
 
 .new_comment input {
   width: fit-content;
-  width: -moz-fit-content
+  width: -moz-fit-content;
 }
 
 .registration,
@@ -142,7 +142,7 @@ a {
   border-radius: 1rem;
   padding: 0 1rem;
   box-sizing: border-box;
-  color: #ff3333;
+  color: #f33;
 }
 
 #error_explanation > h2 {
