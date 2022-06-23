@@ -99,7 +99,8 @@ a {
   width: -moz-fit-content
 }
 
-.registration {
+.registration,
+.login-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -122,11 +123,14 @@ a {
 }
 
 .registration .field input,
-.registration .field textarea {
+.registration .field textarea,
+.login-section .field input,
+.login-section .field textarea {
   padding: 0.5rem;
 }
 
-.registration .form input[type='submit'] {
+.registration .form input[type='submit'],
+.login-section .form input[type='submit'] {
   padding: 0.5rem;
   align-self: center;
 }
