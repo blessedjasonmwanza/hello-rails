@@ -104,8 +104,7 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: calc(100vh - 16px);
-  margin-top: -4rem;
+  min-height: calc(100vh - 16px);
 }
 
 .form {
@@ -114,7 +113,8 @@ a {
   width: 30%;
 }
 
-.form > div {
+.form > div,
+.form > div > .field_with_errors {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -124,6 +124,26 @@ a {
 .registration .field input,
 .registration .field textarea {
   padding: 0.5rem;
+}
+
+.registration .form input[type='submit'] {
+  padding: 0.5rem;
+  align-self: center;
+}
+
+#error_explanation {
+  display: flex;
+  flex-direction: column;
+  background-color: #eaeaea;
+  border-radius: 1rem;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  color: #ff3333;
+}
+
+#error_explanation > h2 {
+  font-size: 1.3rem;
+  margin: 0.8rem 0;
 }
 
 @media only screen and (max-width: 650px) {
