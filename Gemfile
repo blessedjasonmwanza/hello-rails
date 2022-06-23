@@ -77,6 +77,6 @@ end
 
 # Rubocop
 gem 'rubocop', '>= 1.0', '< 2.0'
-#devise
+# devise
 
 gem 'devise'
