@@ -96,4 +96,68 @@ a {
 
 .new_comment input {
   width: fit-content;
+  width: -moz-fit-content;
+}
+
+.registration,
+.login-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 16px);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+
+.form > div,
+.form > div > .field_with_errors {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.registration .field input,
+.registration .field textarea,
+.login-section .field input,
+.login-section .field textarea {
+  padding: 0.5rem;
+}
+
+.registration .form input[type='submit'],
+.login-section .form input[type='submit'] {
+  padding: 0.5rem;
+  align-self: center;
+}
+
+#error_explanation {
+  display: flex;
+  flex-direction: column;
+  background-color: #eaeaea;
+  border-radius: 1rem;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  color: #f33;
+}
+
+#error_explanation > h2 {
+  font-size: 1.3rem;
+  margin: 0.8rem 0;
+}
+
+@media only screen and (max-width: 650px) {
+  .form {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .form {
+    width: 50%;
+  }
 }
