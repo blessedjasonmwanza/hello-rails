@@ -11,6 +11,10 @@
   <%= f.hidden_field :post_id, value: @post.id %>
   <%= f.submit "Like", disable_with: 'updating likes...' %>
 <% end %>
+<%= button_to "Delete", user_post_path(post_id: @post.id), method: :delete, data: {
+  turbolinks: false,
+} %>
+<br />
 <ul class="comments">
   <% @post.recent_comments.each do |comment| %>
     <li><%= comment.author.name %>: <%= comment.text %>
