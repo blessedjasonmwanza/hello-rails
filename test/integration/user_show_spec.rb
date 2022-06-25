@@ -77,7 +77,7 @@ RSpec.describe 'Show User page', type: :system do
       expect(page).to have_link('See all posts')
     end
     it 'The user photo is displayed' do
-      visit new_user_session_path 
+      visit new_user_session_path
       within('#new_user') do
         fill_in 'Email', with: 'mwanzabj@gmail.com'
         fill_in 'Password', with: 'password'
