@@ -7,7 +7,9 @@ class Ability
     if user.is? :admin
       can :manage, :all
     else
+      can %i[destroy], Comment, author_id: user.id
       can %i[create destroy], Post, author_id: user.id
+      can :create, Comment, :all
       can :read, :all
     end
     # Define abilities for the user here. For example:
