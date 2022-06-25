@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :comments, only: [:create]
+  resources :comments, only: [:create, :destroy]
   resources :likes, only: [:create]
   # root 'pages/hello'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
@@ -9,6 +9,6 @@ Rails.application.routes.draw do
   # root "articles#index"
   root 'users#index'
   resources :users, only: [:index, :show] do
-    resources :posts, only: [:index, :show, :new, :create]
+    resources :posts, only: [:index, :show, :new, :create, :destroy]
   end
 end

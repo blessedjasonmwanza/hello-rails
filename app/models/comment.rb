@@ -7,7 +7,13 @@ class Comment < ApplicationRecord
 
   after_save :increase_post_comment_counter
 
+  after_destroy :decrease_post_comment_counter
+
   def increase_post_comment_counter
     post.increment!(:comments_counter)
+  end
+
+  def decrease_post_comment_counter
+    post.decrement!(:comments_counter) unless post.comments_counter.zero?
   end
 end
