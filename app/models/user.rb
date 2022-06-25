@@ -20,8 +20,8 @@ class User < ApplicationRecord
   def recent_posts
     posts.limit(3).order(created_at: :desc)
   end
-  
-  def generate_api_token 
+
+  def generate_api_token
     self.api_token = SecureRandom.hex(16)
     save!
   end
