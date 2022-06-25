@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'Show User page', type: :system do
   describe 'show user page' do
-    before :each do
+    before :all do
       Comment.delete_all
       Post.delete_all
       User.delete_all
