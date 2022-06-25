@@ -11,7 +11,6 @@ RSpec.describe 'On Post Index Page', type: :feature do
                      password_confirmation: 'password')
     @user.skip_confirmation!
     @user.save!
-
     visit user_session_path
     within('#new_user') do
       fill_in 'Email', with: 'mwanzabj@gmail.com'
@@ -22,7 +21,8 @@ RSpec.describe 'On Post Index Page', type: :feature do
 
     @saadat = User.new(
       name: 'Saadat', bio: 'my bio', email: 'saadat@gmail.com',
-      password: 'saadat1234', password_confirmation: 'saadat1234')
+      password: 'saadat1234', password_confirmation: 'saadat1234'
+    )
     @saadat.skip_confirmation!
     @saadat.save!
 

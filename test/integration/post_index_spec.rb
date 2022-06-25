@@ -1,18 +1,19 @@
 require 'rails_helper'
 RSpec.describe 'On Post Index Page', type: :feature do
-  before(:each) do
+  before :each do
     Comment.delete_all
-    Like.delete_all
     Post.delete_all
     User.delete_all
-    @user = User.new(name: 'Blessed Jason Mwanza',
-                     email: 'mwanzabj@gmail.com',
-                     bio: 'Software Developer from Zambia',
-                     password: 'password',
-                     password_confirmation: 'password')
+
+    @user = User.new(
+      name: 'Blessed Jason Mwanza',
+      email: 'mwanzabj@gmail.com',
+      bio: 'Software Developer from Zambia',
+      password: 'password',
+      password_confirmation: 'password'
+    )
     @user.skip_confirmation!
     @user.save!
-
     visit user_session_path
     within('#new_user') do
       fill_in 'Email', with: 'mwanzabj@gmail.com'
@@ -22,7 +23,6 @@ RSpec.describe 'On Post Index Page', type: :feature do
     @post1 = Post.create!(title: 'post 1', text: 'My post 1', author_id: @user.id)
     @post2 = Post.create!(title: 'post 2', text: 'My post 2', author_id: @user.id)
     @post3 = Post.create!(title: 'post 3', text: 'My post 3', author_id: @user.id)
-
     jane = User.new(name: 'Jane Doe',
                     email: 'janedoe@gmail.com',
                     bio: 'Software Developer from Zambia',
@@ -30,12 +30,12 @@ RSpec.describe 'On Post Index Page', type: :feature do
                     password_confirmation: 'password')
     jane.skip_confirmation!
     jane.save!
-
     Comment.create(text: 'Nice', post_id: @post1.id, author_id: jane.id)
     Comment.create(text: 'Great', post_id: @post1.id, author_id: jane.id)
     Comment.create(text: 'Cool', post_id: @post1.id, author_id: jane.id)
     visit user_posts_path(@user)
   end
+
   describe 'post' do
     it 'test username' do
       expect(page).to have_content 'Jane'
