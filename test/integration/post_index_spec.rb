@@ -68,5 +68,11 @@ RSpec.describe 'On Post Index Page', type: :feature do
       click_link 'post 1'
       expect(page).to have_current_path(user_post_path(@user, @post1))
     end
+    it 'The user photo is displayed' do
+      img = page.all('img')
+      puts plain: img[0][:alt]
+      expect(img[0][:alt]).to include(@user.name)
+      expect(img[0][:src]).not_to be('')
+    end
   end
 end
