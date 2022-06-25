@@ -3,6 +3,9 @@ require 'rails_helper'
 RSpec.describe 'Login Page', type: :system do
   describe 'user index page' do
     before :all do
+      Comment.delete_all
+      Like.delete_all
+      Post.delete_all
       User.delete_all
       unless User.find_by(email: 'daniel1@gmail.com')
         user = User.new(
