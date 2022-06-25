@@ -11,4 +11,12 @@ Rails.application.routes.draw do
   resources :users, only: [:index, :show] do
     resources :posts, only: [:index, :show, :new, :create, :destroy]
   end
+  namespace :api do
+    namespace :v1 do
+      post 'users/sign_in' => 'users#login'
+      get 'posts' => 'posts#index'
+      get 'comments' => 'comments#index'
+      post 'comments/create' => 'comments#create'
+    end
+  end
 end
