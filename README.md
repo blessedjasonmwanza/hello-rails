@@ -29,10 +29,10 @@ This README documents steps necessary to get the application up and running.
 
 * Tests
   - Run (*ensure your postgreSQL is running as well*)
-      - Models
-        - ```rspec spec/models```
-      - Requests
-        - ```rspec spec/requests```
+      - Integrations
+        - **Method 1:** ```bundle exec rspec test/integration/ ```
+        > if fails, try
+        - **Method 2:**  ```rspec test/integration/```
 
 * Run project
   - ```rails db:migrate:reset db:seed``` then
