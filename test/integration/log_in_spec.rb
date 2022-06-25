@@ -2,12 +2,13 @@ require 'rails_helper'
 
 describe 'Login process', type: :feature do
   before :each do
-    user = User.new(name: 'Blessed Jason Mwanza', bio: 'Software Engineer', posts_counter: 0,
-                    email: 'mwanzabj@gmail.com')
-    user.password = '123456'
-    user.password_confirmation = '123456'
-    user.skip_confirmation!
-    user.save!
+    @user = User.new(name: 'Blessed Jason Mwanza',
+          email: 'mwanzabj@gmail.com',
+          bio: 'Software Developer from Zambia',
+          password: 'password',
+          password_confirmation: 'password')
+    @user.skip_confirmation!
+    @user.save!
   end
 
   context 'Elements on page display' do
@@ -37,7 +38,7 @@ describe 'Login process', type: :feature do
       visit new_user_session_path
       within('form') do
         fill_in 'user_email', with: 'mwanzabj@gmail.com'
-        fill_in 'user_password', with: '123456'
+        fill_in 'user_password', with: 'password'
       end
       click_button('Log in')
       expect(page).to have_content 'Blessed Jason Mwanza'
