@@ -10,10 +10,10 @@ module Api
             if post
               format.json { render json: post.comments }
             else
-              format.json { render json: { success: false, message: ['Post must exist'] } }
+              format.json { render json: { success: false, message: ['Oops, no one has posted anything yet.'] } }
             end
           else
-            format.json { render json: { success: false, message: ['User must exist'] } }
+            format.json { render json: { success: false, message: ['We currently have no user in the database'] } }
           end
         end
       end
