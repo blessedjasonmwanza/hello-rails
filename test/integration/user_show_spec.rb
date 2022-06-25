@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'Show User page', type: :system do
   describe 'show user page' do
-    before :all do
+    before :each do
       Comment.delete_all
       Post.delete_all
       User.delete_all
@@ -75,6 +75,18 @@ RSpec.describe 'Show User page', type: :system do
       expect(page).to have_content('post 2')
       expect(page).to have_content('post 3')
       expect(page).to have_link('See all posts')
+    end
+    it 'The user photo is displayed' do
+      visit new_user_session_path
+      within('#new_user') do
+        fill_in 'Email', with: 'mwanzabj@gmail.com'
+        fill_in 'Password', with: 'password'
+      end
+      click_button 'Log in'
+      img = page.all('img')
+      puts plain: img[0][:alt]
+      expect(img[0][:alt]).to include(@user.name)
+      expect(img[0][:src]).not_to be('')
     end
   end
 end
