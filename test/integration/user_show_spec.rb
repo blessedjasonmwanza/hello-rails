@@ -3,9 +3,11 @@ require 'rails_helper'
 RSpec.describe 'Show User page', type: :system do
   describe 'show user page' do
     before :each do
-      
+      Comment.delete_all
+      Post.delete_all
+      User.delete_all
       unless User.find_by(email: 'mwanzabj@gmail.com')
-        @user = User.new(name: 'Chimwemwe',
+        @user = User.new(name: 'Blessed Jason Mwanza',
                          email: 'mwanzabj@gmail.com',
                          bio: 'Software Developer from Zambia',
                          password: 'password',
@@ -31,7 +33,7 @@ RSpec.describe 'Show User page', type: :system do
       click_button 'Log in'
       name = find('h2 a')
       name.click
-      expect(page).to have_content('Chimwemwe')
+      expect(page).to have_content('Blessed Jason Mwanza')
       expect(page).to have_content('Software Developer from Zambia')
     end
 
