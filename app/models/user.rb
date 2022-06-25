@@ -13,7 +13,7 @@ class User < ApplicationRecord
   ROLES = %i[admin default].freeze
 
   def is?(requested_role)
-    role == requested_role.to_s
+    ROLES == requested_role.to_s
   end
 
   def recent_posts
