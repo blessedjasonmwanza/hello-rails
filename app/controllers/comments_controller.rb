@@ -10,7 +10,7 @@ class CommentsController < ApplicationController
     authorize! :destroy, @comment
 
     @post = Post.find(@comment.post_id)
-    
+
     flash[:success] = ['Comment Deleted Successfully']
     @comment.destroy
 

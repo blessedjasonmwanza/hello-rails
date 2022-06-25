@@ -6,7 +6,7 @@ class Comment < ApplicationRecord
   validates :post_id, presence: true
 
   after_save :increase_post_comment_counter
-  
+
   after_destroy :decrease_post_comment_counter
 
   def increase_post_comment_counter
