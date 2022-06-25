@@ -3,10 +3,10 @@ require 'rails_helper'
 describe 'Login process', type: :feature do
   before :each do
     @user = User.new(name: 'Blessed Jason Mwanza',
-          email: 'mwanzabj@gmail.com',
-          bio: 'Software Developer from Zambia',
-          password: 'password',
-          password_confirmation: 'password')
+                     email: 'mwanzabj@gmail.com',
+                     bio: 'Software Developer from Zambia',
+                     password: 'password',
+                     password_confirmation: 'password')
     @user.skip_confirmation!
     @user.save!
   end

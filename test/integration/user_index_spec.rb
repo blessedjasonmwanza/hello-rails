@@ -10,7 +10,7 @@ RSpec.describe 'Login Page', type: :system do
           email: 'daniel1@gmail.com',
           bio: 'Software Developer from Zambia',
           password: '123456',
-          password_confirmation: '123456',
+          password_confirmation: '123456'
         )
         user.skip_confirmation!
         user.save!
@@ -23,7 +23,7 @@ RSpec.describe 'Login Page', type: :system do
           email: 'test1@gmail.com',
           bio: 'Software Developer from Zambia',
           password: '123456',
-          password_confirmation: '123456',
+          password_confirmation: '123456'
         )
         user.skip_confirmation!
         user.save!
