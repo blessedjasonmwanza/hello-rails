@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   subject do
-    User.new(name: 'Blessed Jason Mwanza', photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
+    User.new(name: 'Blessed Jason Mwanza', email: 'mwanzabj@gmail.com', photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
              bio: 'Passion Driven software developer with a keen enthusiam for creating impact driven software')
   end
 
