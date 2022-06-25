@@ -31,8 +31,7 @@ RSpec.describe 'Show User page', type: :system do
         fill_in 'Password', with: 'password'
       end
       click_button 'Log in'
-      name = find('h2 a')
-      name.click
+      find('h2 a').click
       expect(page).to have_content('Blessed Jason Mwanza')
       expect(page).to have_content('Software Developer from Zambia')
     end
@@ -44,9 +43,9 @@ RSpec.describe 'Show User page', type: :system do
         fill_in 'Password', with: 'password'
       end
       click_button 'Log in'
-      name = find_all('h2 a')
-      name[0].click
-      name = find('.user_card .content p')
+      @name = find_all('h2 a')
+      @name[0].click
+      @name = find('.user_card .content p')
       expect(page).to have_content('Number of posts: 3')
     end
 
